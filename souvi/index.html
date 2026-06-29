@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Souvi Engineering – Customer Requirement Based All Type of Seat Frame Manufacturers, Pune.">
+  <title>Souvi Engineering | Seat Frame Manufacturers, Pune</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230A2B6E'/><text y='24' x='5' font-size='18' fill='white' font-family='serif' font-weight='bold'>S</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Extra logo fallback */
+    .logo-icon-fallback {
+      width: 42px; height: 42px;
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      border-radius: 9px; display: grid; place-items: center;
+      font-family: 'Playfair Display', serif; font-size: 1.4rem;
+      font-weight: 900; color: white; flex-shrink: 0;
+    }
+    /* Products section */
+    .products-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .product-card {
+      border-radius: var(--radius-lg); overflow: hidden;
+      border: 1px solid var(--gray-200); transition: var(--transition);
+      background: white;
+    }
+    .product-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-5px); }
+    .product-card-img { height: 200px; overflow: hidden; }
+    .product-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .product-card:hover .product-card-img img { transform: scale(1.07); }
+    .product-card-body { padding: 22px; }
+    .product-card-body h3 { font-size: 1.05rem; margin-bottom: 8px; }
+    .product-card-body p { font-size: 0.87rem; }
+    @media(max-width:768px){ .products-row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <!-- Replace src with your actual logo image path e.g. images/logo.png -->
+        <img src="images/logo.png" alt="Souvi Engineering Logo" class="logo-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+        <div class="logo-icon-fallback" style="display:none;">S</div>
+        <div class="logo-text"><span>Souvi</span><em>Engineering</em></div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="nav-cta">Get Quote</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-img"></div>
+  <div class="hero-bg-overlay"></div>
+  <div class="container" style="display:flex; justify-content:flex-start;">
+    <div class="hero-content">
+      <div class="hero-badge">Precision Manufacturing · Pune, India</div>
+      <h1>Customer-Focused<br><span class="gradient-text">Seat Frame</span><br>Manufacturers</h1>
+      <p>High-precision pipe bending and custom seat frame fabrication for automotive and industrial applications. Built to your exact specifications.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Get a Free Quote
+        </a>
+        <a href="services.html" class="btn-secondary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          Our Services
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num" data-count="10" data-suffix="+">10+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-count="4" data-suffix="">4</div>
+          <div class="stat-label">Bending Techniques</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-count="100" data-suffix="%">100%</div>
+          <div class="stat-label">Custom Orders</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-label">Why Choose Us</span>
+      <h2>Precision. Quality. <span class="gradient-text">Reliability.</span></h2>
+      <p>Every seat frame manufactured to your exact specification using high-precision machinery and proven techniques.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal" data-delay="0.05">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M4.93 4.93l1.41 1.41M12 2v2M12 20v2M20 12h2M2 12h2M17.66 17.66l-1.41-1.41M6.34 17.66l1.41-1.41"/></svg>
+        </div>
+        <h3>High-Precision Pipe Bending</h3>
+        <p>CNC-grade pipe bending machines delivering accurate, repeatable bends with tight tolerances for complex seat frame geometries.</p>
+      </div>
+      <div class="feature-card reveal" data-delay="0.1">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+        </div>
+        <h3>Consistent Quality Output</h3>
+        <p>Strict quality control at every stage ensures consistent product quality, minimized material waste, and high productivity.</p>
+      </div>
+      <div class="feature-card reveal" data-delay="0.15">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2M9 2h6a1 1 0 011 1v2a1 1 0 01-1 1H9a1 1 0 01-1-1V3a1 1 0 011-1z"/></svg>
+        </div>
+        <h3>Drawing-Based Manufacturing</h3>
+        <p>We manufacture all types of seat frames entirely based on your requirements. Send us your drawings and we deliver exactly that.</p>
+      </div>
+      <div class="feature-card reveal" data-delay="0.2">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3>Automotive Grade</h3>
+        <p>Frames built for automotive and industrial seating systems, meeting structural and safety demands of modern vehicle manufacturing.</p>
+      </div>
+      <div class="feature-card reveal" data-delay="0.25">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Structural Tubular Components</h3>
+        <p>Full capability to fabricate all structural tubular components — header bows, side members, tack rails, and more to spec.</p>
+      </div>
+      <div class="feature-card reveal" data-delay="0.3">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>Direct from Manufacturer</h3>
+        <p>Work directly with the owner and team for fast communication, responsive timelines, and competitive pricing with no middlemen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENDING TECHNIQUES with images -->
+<section class="bending-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Our Techniques</span>
+      <h2>Four <span class="gradient-text">Bending Methods</span></h2>
+      <p>We deploy the right bending technique for each geometry to achieve optimal quality and precision.</p>
+    </div>
+    <div class="bending-grid">
+      <div class="bending-card reveal" data-delay="0.05">
+        <div class="bending-card-img">
+          <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=600&q=80&fit=crop" alt="Rotary Draw Bending" loading="lazy">
+          <div class="bending-card-num">01</div>
+        </div>
+        <div class="bending-card-body">
+          <h3>Rotary Draw Bending</h3>
+          <p>The most precise method. Pipe is held by a clamp die and bent around a rotating bend die — producing tight-radius, consistent bends with minimal distortion. Ideal for seat frame main structures.</p>
+        </div>
+      </div>
+      <div class="bending-card reveal" data-delay="0.1">
+        <div class="bending-card-img">
+          <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80&fit=crop" alt="Compression Bending" loading="lazy">
+          <div class="bending-card-num">02</div>
+        </div>
+        <div class="bending-card-body">
+          <h3>Compression Bending</h3>
+          <p>The pipe is held stationary while a slide piece pushes around a stationary bend die. Cost-effective for simpler geometries and larger production volumes with moderate-radius bends.</p>
+        </div>
+      </div>
+      <div class="bending-card reveal" data-delay="0.15">
+        <div class="bending-card-img">
+          <img src="https://images.unsplash.com/photo-1574359411659-15573a27fd0c?w=600&q=80&fit=crop" alt="Ram Bending" loading="lazy">
+          <div class="bending-card-num">03</div>
+        </div>
+        <div class="bending-card-body">
+          <h3>Ram Bending</h3>
+          <p>A ram presses the pipe over a radius block with counter-rollers supporting the sides. Well-suited for large-radius bends in structural tube components with high repeatability.</p>
+        </div>
+      </div>
+      <div class="bending-card reveal" data-delay="0.2">
+        <div class="bending-card-img">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80&fit=crop" alt="3-Roll Bending" loading="lazy">
+          <div class="bending-card-num">04</div>
+        </div>
+        <div class="bending-card-body">
+          <h3>3-Roll Bending</h3>
+          <p>Three rollers progressively form the pipe into curves. Particularly effective for arcs and circular bends used in seat frame back structures and large tubular rings.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-label">Our Work</span>
+      <h2 style="color:white;">Gallery — <span style="background:linear-gradient(135deg,var(--cyan-light),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Machines & Products</span></h2>
+      <p>A look inside our facility — bending machines, finished seat frames, and structural components.</p>
+    </div>
+    <div class="gallery-tabs reveal" data-delay="0.05">
+      <button class="gallery-tab active" data-filter="all">All</button>
+      <button class="gallery-tab" data-filter="machine">Machines</button>
+      <button class="gallery-tab" data-filter="frame">Seat Frames</button>
+      <button class="gallery-tab" data-filter="process">Process</button>
+      <button class="gallery-tab" data-filter="component">Components</button>
+    </div>
+    <div class="gallery-grid reveal" data-delay="0.1">
+
+      <div class="gallery-item" data-category="machine">
+        <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&q=80&fit=crop" alt="CNC Pipe Bending Machine" loading="lazy">
+        <div class="gallery-item-overlay"><div class="gallery-item-label">CNC Pipe Bending Machine</div></div>
+      </div>
+
+      <div class="gallery-item" data-category="frame">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&fit=crop" alt="Automotive Seat Frame" loading="lazy">
+        <div class="gallery-item-overlay"><div class="gallery-item-label">Automotive Seat Frame</div></div>
+      </div>
+
+      <div class="gallery-item" data-category="process">
+        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80&fit=crop" alt="Manufacturing Process" loading="lazy">
+        <div class="gallery-item-overlay"><div class="gallery-item-label">Pipe Bending Process</div></div>
+      </div>
+
+      <div class="gallery-item" data-category="component">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80&fit=crop" alt="Structural Tubular Components" loading="lazy">
+        <div class="gallery-item-overlay"><div class="gallery-item-label">Structural Tube Components</div></div>
+      </div>
+
+      <div class="gallery-item" data-category="machine">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80&fit=crop" alt="Industrial Equipment" loading="lazy">
+        <div class="gallery-item-overlay"><div class="gallery-item-label">Industrial Bending Equipment</div></div>
+      </div>
+
+      <div class="gallery-item" data-category="frame">
+        <img src="https://images.unsplash.com/photo-1577071835779-c2a4eb3aba49?w=600&q=80&fit=crop" alt="Industrial Seat Frame" loading="lazy">
+        <div class="gallery-item-overlay"><div class="gallery-item-label">Industrial Seat Frame</div></div>
+      </div>
+
+      <div class="gallery-item" data-category="process">
+        <img src="https://images.unsplash.com/photo-1574359411659-15573a27fd0c?w=600&q=80&fit=crop" alt="Welding Process" loading="lazy">
+        <div class="gallery-item-overlay"><div class="gallery-item-label">Fabrication & Welding</div></div>
+      </div>
+
+      <div class="gallery-item" data-category="component">
+        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&q=80&fit=crop" alt="Precision Pipe Bends" loading="lazy">
+        <div class="gallery-item-overlay"><div class="gallery-item-label">Precision Pipe Bends</div></div>
+      </div>
+
+    </div>
+    <div style="text-align:center; margin-top:36px;" class="reveal" data-delay="0.15">
+      <a href="contact.html" class="btn-primary" style="display:inline-flex;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        Request a Quote for Your Frame
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS SECTION -->
+<section style="background:white; padding:88px 0;">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-label">Product Range</span>
+      <h2>Seat Frames for Every <span class="gradient-text">Application</span></h2>
+      <p>From automotive bucket seats to heavy industrial seating — we manufacture structural seat frames to your exact requirements.</p>
+    </div>
+    <div class="products-row">
+      <div class="product-card reveal" data-delay="0.05">
+        <div class="product-card-img">
+          <img src="https://images.unsplash.com/photo-1547489432-cf93fa6c71ee?w=600&q=80&fit=crop&crop=center" alt="Automotive Seat Frame" loading="lazy">
+        </div>
+        <div class="product-card-body">
+          <h3>Automotive Seat Frames</h3>
+          <p>Precision-welded frames for cars, SUVs, and commercial vehicles. OEM-compatible and engineered for structural integrity.</p>
+        </div>
+      </div>
+      <div class="product-card reveal" data-delay="0.1">
+        <div class="product-card-img">
+          <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=600&q=80&fit=crop&crop=center" alt="Bent Tubular Components" loading="lazy">
+        </div>
+        <div class="product-card-body">
+          <h3>Bent Tubular Components</h3>
+          <p>Complex multi-bend pipe assemblies using all four bending techniques for any required geometry or radius.</p>
+        </div>
+      </div>
+      <div class="product-card reveal" data-delay="0.15">
+        <div class="product-card-img">
+          <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80&fit=crop&crop=center" alt="Industrial Seating Frames" loading="lazy">
+        </div>
+        <div class="product-card-body">
+          <h3>Industrial Seating Frames</h3>
+          <p>Heavy-duty frames for buses, trains, and industrial equipment — built to withstand demanding load cycles and environments.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARALLAX CTA STRIP -->
+<div class="parallax-strip">
+  <div class="parallax-strip-bg"></div>
+  <div class="parallax-strip-overlay"></div>
+  <div class="container">
+    <div class="parallax-strip-content reveal">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Share your drawings or specifications and receive a competitive quote within 24 hours.</p>
+      <a href="contact.html" class="btn-primary" style="display:inline-flex; background:white; color:var(--navy); box-shadow:0 4px 20px rgba(0,0,0,0.2);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Contact Us Today
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- OWNER CARD -->
+<section class="owner-section">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-label">Meet the Owner</span>
+      <h2>Direct Contact, <span class="gradient-text">Personal Service</span></h2>
+    </div>
+    <div class="owner-card reveal">
+      <div class="owner-avatar">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"/></svg>
+      </div>
+      <div class="owner-info">
+        <div class="owner-tag">Owner &amp; Director</div>
+        <div class="owner-name">Sudheer Mali</div>
+        <div class="owner-company">Souvi Engineering · Chinchwad, Pune</div>
+        <div class="owner-contacts">
+          <div class="owner-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            <a href="tel:+919422327119">+91 9422327119</a>
+          </div>
+          <div class="owner-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:souviengg79@gmail.com">souviengg79@gmail.com</a>
+          </div>
+          <div class="owner-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Plot No. 11, Flat No. 5, Shridhar Nagar, Chinchwad, Pune – 411033
+          </div>
+          <div class="owner-contact-item">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+            <a href="http://www.souviengineering.com" target="_blank" rel="noopener">www.souviengineering.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-text" style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;"><span>Souvi</span><em>Engineering</em></div>
+        <p>Customer requirement based all type of seat frame manufacturers. Precision pipe bending for automotive and industrial seating.</p>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Plot No. 11, Flat No. 5, Shridhar Nagar, Chinchwad, Pune – 411033
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Seat Frame Manufacturing</a>
+        <a href="services.html">Pipe Bending</a>
+        <a href="services.html">Automotive Frames</a>
+        <a href="services.html">Industrial Seating</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          +91 9422327119
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          souviengg79@gmail.com
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+          www.souviengineering.com
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; 2026 Souvi Engineering. All rights reserved. Crafted with precision.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

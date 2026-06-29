@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Souvi Engineering - Get in touch for seat frame manufacturing and pipe bending services in Pune.">
+  <title>Contact Us | Souvi Engineering</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230A2B6E'/><text y='24' x='4' font-size='20' fill='white'>S</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Souvi Engineering Logo" class="logo-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+        <div class="logo-icon-fallback" style="display:none;">S</div>
+        <div class="logo-text"><span>Souvi</span><em>Engineering</em></div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html" class="nav-cta">Get Quote</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container" style="position:relative;z-index:1;">
+    <span class="section-label">Get In Touch</span>
+    <h1>Let's Build Something <span class="gradient-text">Together</span></h1>
+    <p>Have a seat frame requirement? Share your drawings or specifications and we'll get back to you within 24 hours.</p>
+  </div>
+</section>
+
+<!-- CONTACT MAIN -->
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- FORM -->
+      <div class="contact-form-card reveal">
+        <h2>Send Us a Message</h2>
+        <p>Fill in the form and our team will respond as soon as possible.</p>
+
+        <form id="contactForm" class="premium-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name * <span>👤</span></label>
+              <input type="text" id="name" name="name" class="premium-input" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="mobile">Mobile Number * <span>📱</span></label>
+              <input type="tel" id="mobile" name="mobile" class="premium-input" placeholder="+91 9422327119" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address * <span>✉️</span></label>
+            <input type="email" id="email" name="email" class="premium-input" placeholder="you@company.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service / Product Interested In <span>🎯</span></label>
+            <select id="service" name="service" class="premium-input">
+              <option value="">Select a service (optional)</option>
+              <option value="Automotive Seat Frame">Automotive Seat Frame</option>
+              <option value="Industrial Seating Frame">Industrial Seating Frame</option>
+              <option value="Pipe Bending">Pipe Bending</option>
+              <option value="Structural Tubular Components">Structural Tubular Components</option>
+              <option value="Custom / Drawing-based">Custom / Drawing-based</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="query">Your Message / Requirements * <span>💬</span></label>
+            <textarea id="query" name="query" class="premium-input" rows="6"
+              placeholder="Describe your seat frame requirements, quantity needed, material preferences, drawings available, etc..."></textarea>
+            <div class="char-counter" id="charCounter">0 characters</div>
+          </div>
+
+          <button type="submit" class="btn-primary btn-submit" id="submitBtn">
+            <span class="btn-text" style="display:flex;align-items:center;gap:10px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+              Send Message
+            </span>
+            <span class="btn-loader" style="display:none;align-items:center;gap:10px;">
+              <svg class="spinner" width="20" height="20" viewBox="0 0 50 50">
+                <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="5" stroke-dasharray="31.4 31.4">
+                  <animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="1s" repeatCount="indefinite"/>
+                </circle>
+              </svg>
+              Sending...
+            </span>
+          </button>
+
+          <div class="form-status" id="formStatus"></div>
+        </form>
+      </div>
+
+      <!-- INFO CARDS -->
+      <div class="contact-info-stack">
+
+        <div class="info-card reveal" data-delay="0.05">
+          <div class="info-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          </div>
+          <div>
+            <h3>Call Us Directly</h3>
+            <p>Speak with Sudheer Mali, Owner</p>
+            <a href="tel:+919422327119" class="info-link">+91 9422327119</a>
+          </div>
+        </div>
+
+        <div class="info-card reveal" data-delay="0.1">
+          <div class="info-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <h3>Email Us</h3>
+            <p>We respond within 24 hours</p>
+            <a href="mailto:souviengg79@gmail.com" class="info-link">souviengg79@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="info-card reveal" data-delay="0.15">
+          <div class="info-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <h3>Visit Our Facility</h3>
+            <p>Plot No. 11, Flat No. 5<br>Shridhar Nagar, Chinchwad<br>Pune – 411033, Maharashtra</p>
+          </div>
+        </div>
+
+        <div class="info-card reveal" data-delay="0.2">
+          <div class="info-card-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div>
+            <h3>Business Hours</h3>
+            <p>Monday – Saturday</p>
+            <span class="info-link">9:00 AM – 7:00 PM IST</span>
+          </div>
+        </div>
+
+        <div class="info-card reveal" data-delay="0.25">
+          <div class="info-card-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+          </div>
+          <div>
+            <h3>Website</h3>
+            <p>More about us online</p>
+            <a href="http://www.souviengineering.com" target="_blank" rel="noopener" class="info-link">www.souviengineering.com</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:white; padding:80px 0;">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">FAQ</span>
+      <h2>Common <span class="gradient-text">Questions</span></h2>
+      <p>Quick answers to questions you might have before reaching out.</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-card reveal" data-delay="0.05">
+        <div class="faq-icon">📐</div>
+        <h3>Do you need drawings to start?</h3>
+        <p>Drawings are preferred but not mandatory. We can work from sketches, sample parts, or a detailed verbal description. We'll confirm specs before manufacturing begins.</p>
+      </div>
+      <div class="faq-card reveal" data-delay="0.1">
+        <div class="faq-icon">📦</div>
+        <h3>What are your minimum order quantities?</h3>
+        <p>We accept both prototype single-piece orders and high-volume production runs. Contact us with your quantity and we'll provide appropriate pricing.</p>
+      </div>
+      <div class="faq-card reveal" data-delay="0.15">
+        <div class="faq-icon">⏱️</div>
+        <h3>What is the typical lead time?</h3>
+        <p>Lead time depends on complexity and quantity. Prototypes can be ready within days; production orders are discussed and confirmed before we start. We always respect committed timelines.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OWNER CARD -->
+<section class="owner-section" style="background:var(--light); padding:60px 0;">
+  <div class="container">
+    <div class="owner-card reveal">
+      <div class="owner-avatar">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"/></svg>
+      </div>
+      <div class="owner-info">
+        <div class="owner-tag">Owner &amp; Director</div>
+        <div class="owner-name">Sudheer Mali</div>
+        <div class="owner-company">Souvi Engineering · Chinchwad, Pune – 411033</div>
+        <div class="owner-contacts">
+          <div class="owner-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            <a href="tel:+919422327119">+91 9422327119</a>
+          </div>
+          <div class="owner-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:souviengg79@gmail.com">souviengg79@gmail.com</a>
+          </div>
+          <div class="owner-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Plot No. 11, Flat No. 5, Shridhar Nagar, Chinchwad, Pune – 411033
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-text" style="font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:900;"><span>Souvi</span><em>Engineering</em></div>
+        <p>Customer requirement based all type of seat frame manufacturers. Precision pipe bending for automotive and industrial seating.</p>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Plot No. 11, Flat No. 5, Shridhar Nagar, Chinchwad, Pune – 411033
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Seat Frame Manufacturing</a>
+        <a href="services.html">Pipe Bending</a>
+        <a href="services.html">Automotive Frames</a>
+        <a href="services.html">Industrial Seating</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          +91 9422327119
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          souviengg79@gmail.com
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; 2026 Souvi Engineering. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>
